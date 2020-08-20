@@ -4,11 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class RoomServicesApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-		System.out.println("I am here Bijay B.");
+		SpringApplication.run(RoomServicesApplication.class, args);
 	}
-
 }
