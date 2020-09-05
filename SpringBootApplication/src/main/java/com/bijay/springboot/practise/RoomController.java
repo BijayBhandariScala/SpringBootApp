@@ -33,14 +33,17 @@ public class RoomController {
 	}
 	
 	@PostMapping("")
-	public ResponseEntity<Room> create(@RequestBody Room room){
-		Room saveRoom = roomRepository.save(room);
-		
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{roomid}")
-				.buildAndExpand(saveRoom.getId()).toUri();
-		return ResponseEntity.created(location).build();
-		
-		
+	public ResponseEntity<Room> create(@RequestBody Room room) throws Exception {
+
+		try {
+			Room saveRoom = roomRepository.save(room);
+			URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{roomid}")
+					.buildAndExpand(saveRoom.getId()).toUri();
+			return ResponseEntity.created(location).build();
+		} catch (Exception ex) {
+			throw new Exception("Unable to post", ex);
+		}
+
 	}
 
 
