@@ -24,7 +24,6 @@ public class RoomController {
 	@Autowired
 	private RoomRepository roomRepository;
 
-	
 	@RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<List<Room>> findAll(@RequestParam(name = "roomNumber", required = false) String roomNumber) {
 		if (StringUtils.isNotEmpty(roomNumber)) {
