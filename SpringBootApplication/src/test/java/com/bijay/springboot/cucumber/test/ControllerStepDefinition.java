@@ -10,16 +10,16 @@ import org.springframework.web.client.RestTemplate;
 
 public class ControllerStepDefinition {
 
-    @Given("^Set a room service api (.+)$")
-    public String setGetEndpoint(String url) {
+    @Given("^Set a room service api endpoint$")
+    public String setGetEndpoint() {
       String getURL =  "http://localhost:8000/";
       return getURL;
     }
 
-    @When("Get URL is called")
+    @When("^Get URL is called with parameter")
     public ResponseEntity<String> callGetMethod() {
         RestTemplate rt = new RestTemplate();
-        String URL=  "http://localhost:8000/"+"rooms";
+        String URL=  setGetEndpoint()+"rooms";
         ResponseEntity<String> response = rt.getForEntity(URL, String.class );
         return response;
     }
