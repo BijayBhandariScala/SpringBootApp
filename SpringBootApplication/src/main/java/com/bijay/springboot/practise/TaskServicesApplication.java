@@ -12,7 +12,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-public class RoomServicesApplication {
+public class TaskServicesApplication {
 	
 	@Bean
     public Docket api() { 
@@ -24,6 +24,6 @@ public class RoomServicesApplication {
     }
 
 	public static void main(String[] args) {
-		SpringApplication.run(RoomServicesApplication.class, args);
+		SpringApplication.run(TaskServicesApplication.class, args);
 	}
 }
