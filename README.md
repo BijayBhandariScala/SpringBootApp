@@ -8,4 +8,4 @@ ServerConfig to hold all external server configurations to run the SpringBootApp
 
 Cucumber implemented to test the endpoint and response.
 
-Technology used: SpringBoot, SpringCloud, Maven, JDK8, Cucumber.
+Technology used: SpringBoot, SpringCloud, Maven, JDK8, Cucumber, MongoDB.
